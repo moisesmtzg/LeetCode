@@ -24,8 +24,17 @@ public class Main {
 		String[] array = {"hola", "adios", "hola", "hola", "saludos", "adios","otro"};
 		int k = 3;
 		//deberia de imprimir hola y adios
-		System.out.println(mostFE.mostFElements(array, k));
-		System.out.println("-----con lambda-------");
-		System.out.println(mostFE.mostFElementsLamda(array, k));
+		//System.out.println(mostFE.mostFElements(array, k));
+		//System.out.println("-----con lambda-------");
+		//System.out.println(mostFE.mostFElementsLamda(array, k));
+		
+		// sum 3 numbers
+		Sum3numbers s3 = new Sum3numbers();
+		int[] nums = {-1,0,1,2,-1,-4};
+		//System.out.println(s3.threeSum(nums));
+		
+		String[] words = {"ab","a"};
+		LongestCommonPrefix lcp = new LongestCommonPrefix();
+		System.out.println(lcp.longestCommonPrefix(words));
 	}
 }
