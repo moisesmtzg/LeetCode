@@ -36,5 +36,11 @@ public class Main {
 		String[] words = {"ab","a"};
 		LongestCommonPrefix lcp = new LongestCommonPrefix();
 		System.out.println(lcp.longestCommonPrefix(words));
+		
+		//Sum 3 closes
+		int target = 1;
+		int[] numArr = {-1,2,1,-4};
+		Sum3Closest sum3Closest = new Sum3Closest();
+		System.out.println(sum3Closest.threeSumClosest(numArr, target));
 	}
 }
