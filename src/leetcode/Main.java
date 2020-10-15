@@ -1,5 +1,9 @@
 package leetcode;
 
+import java.util.Arrays;
+
+import ordenamiento.QuickSort;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -31,6 +35,9 @@ public class Main {
 		// sum 3 numbers
 		Sum3numbers s3 = new Sum3numbers();
 		int[] nums = {-1,0,1,2,-1,-4};
+		QuickSort quickSort = new QuickSort();
+		quickSort.sort(nums);
+		System.out.println(Arrays.toString(nums));
 		//System.out.println(s3.threeSum(nums));
 		
 		String[] words = {"ab","a"};
@@ -42,5 +49,7 @@ public class Main {
 		int[] numArr = {-1,2,1,-4};
 		Sum3Closest sum3Closest = new Sum3Closest();
 		System.out.println(sum3Closest.threeSumClosest(numArr, target));
+		
+		
 	}
 }
