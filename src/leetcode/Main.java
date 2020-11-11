@@ -56,6 +56,23 @@ public class Main {
 		Sum3Closest sum3Closest = new Sum3Closest();
 		System.out.println(sum3Closest.threeSumClosest(numArr, target));
 		*/
+
+		/*
+		//Merge 2 sorted list
+		Merge2SortedLists merge2SortedLists = new Merge2SortedLists();
+		ListNode res = merge2SortedLists.mergeTwoList(node6, node1);
+		while(res.next != null) {
+			System.out.println(res.val);
+			res = res.next;
+		}
+		*/
+		
+		/*
+		//pow
+		Pow pow = new Pow();
+		System.out.println(pow.myPow(2.00000, -2));
+		*/
+		
 		
 		/*
 		Divide2Numbers d2n = new Divide2Numbers();
