@@ -13,27 +13,25 @@ public class LongestCommonPrefix {
 			return strs[0];
 		}
 
-		//tomamos la 1er palabra como prefijo y comparamos con las siguientes, quitamos caracteres
-		String prefix = strs[0];
-		
-		//recorremos las otras palabras
-		for(int i = 1; i<strs.length; i++) {
-			prefix = comparePrefix(strs[i], prefix.toCharArray());
-		}
-		
-		return prefix;
-	}
-	
-	private String comparePrefix(String s, char[] prefix) {
-		char[] word = s.toCharArray();
-		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i<prefix.length-1 ; i++) {
-			if(prefix[i] == word[i]) {
-				sb.append(prefix[i]);
-			}else {
-				break;
+		//tomamos un prefijo vacio y vamosa tomar el 1er caracter
+		// de la primera palabra y vamos a comparlo con el de las otras palabras
+		String prefix = "";
+		for(int charIndex = 0; charIndex < strs[0].length(); charIndex++) {
+			//tomamos el 1er caracter de la primera palabra, este lo buscaremos en las otras palabras
+			char c = strs[0].charAt(charIndex);
+			for(int wordIndex = 1; wordIndex < strs.length; wordIndex++) {
+				//revisamos si tamaño de la 1a palabra(charIndex) es mayor al de las otras, regresamos el prefijo que tenmos 
+				if(charIndex >= strs[wordIndex].length()) {
+					return prefix;
+				}
+				//si los caracteres son diferentes, regresamo el prefijo
+				if(c != strs[wordIndex].charAt(charIndex)) {
+					return prefix;
+				}
 			}
+			//le añadimos el siguiente caracter al prefijo que tenemos
+			prefix = strs[0].substring(0, charIndex+1);
 		}
-		return sb.toString();
+		return prefix;
 	}
 }

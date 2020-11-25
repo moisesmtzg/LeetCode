@@ -2,8 +2,6 @@ package leetcode;
 
 import java.util.Arrays;
 
-import javax.xml.soap.Node;
-
 import ordenamiento.QuickSort;
 
 public class Main {
@@ -11,14 +9,11 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//1234
-		ListNode node1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
-		//124
-		ListNode node6 = new ListNode(1, new ListNode(3, new ListNode(4)));
-		//12
-		ListNode node2 = new ListNode(1, new ListNode(2));
-		
 		/*
+		//456
+		ListNode node1 = new ListNode(5, new ListNode(6, new ListNode(4)));
+		//321
+		ListNode node6 = new ListNode(3, new ListNode(2, new ListNode(1)));
 		SolutionAddTwoNumbers sn = new SolutionAddTwoNumbers();
 		ListNode res = sn.addTwoNumbers(node1, node6);
 		while(res != null) {
@@ -45,14 +40,14 @@ public class Main {
 		QuickSort quickSort = new QuickSort();
 		quickSort.sort(nums);
 		System.out.println(Arrays.toString(nums));
-		System.out.println(s3.threeSum(nums));
-		/*
+		//System.out.println(s3.threeSum(nums));
+		*/
 		
-		/*
+		
+		//longest common prefix
 		String[] words = {"ab","a"};
 		LongestCommonPrefix lcp = new LongestCommonPrefix();
 		System.out.println(lcp.longestCommonPrefix(words));
-		*/
 		
 		/*
 		//Sum 3 closes
@@ -78,7 +73,14 @@ public class Main {
 		System.out.println(pow.myPow(2.00000, -2));
 		*/
 		
+		
 		/*
+		Divide2Numbers d2n = new Divide2Numbers();
+		int res = d2n.divide(-2147483648, 2);
+		System.out.println(res);
+		*/
+
+/*
 		//Find First and Last Position of Element in Sorted Array
 		int[] nums = {5,7,7,8,8,10};
 		FirstAndLastPositionSortedArray flpa = new FirstAndLastPositionSortedArray();
