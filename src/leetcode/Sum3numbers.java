@@ -15,7 +15,7 @@ public class Sum3numbers {
 			return res;
 		}
 		
-		//debemos de formas las listas que contentan 3 numeros que la suma de 0
+		//debemos de formar las listas que contengan 3 numeros y que la suma de 0
 		//se crea un set de listas pq nos piden que sean unicas las triadas
 		Set<List<Integer>> listas = new HashSet<List<Integer>> ();
 		
