@@ -6,7 +6,6 @@ public class TwoSumII {
     public static int[] twoSum(int[] numbers, int target) {
         int p1 = 0;
         int p2 = numbers.length-1;
-        int res = 0;
 
         while (p1 < p2 && numbers[p1] + numbers[p2] != target){
             if (numbers[p1] + numbers[p2] > target){
