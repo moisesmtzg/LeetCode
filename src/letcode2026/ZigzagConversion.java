@@ -1,30 +1,34 @@
 package letcode2026;
 
+
 public class ZigzagConversion {
     public static String convert(String s, int numRows){
-        int size = s.length();
-        char[][] matrixChar = new char[numRows][size];
+        if ( numRows  == 1 ) return s;
+        StringBuilder[] sb = new StringBuilder[numRows];
 
-        int cont = 0;
-        int i = 0, j = 0;
+        for(int i = 0; i< numRows; i++){
+            sb[i] = new StringBuilder();
+        }
 
-        while(cont < size) {
-            if(i < numRows) {
-                matrixChar[i++][j] = s.charAt(cont++);
+        int index = 0;
+        char[] arr = s.toCharArray();
+        int sizeArr = arr.length;
+        while (index < sizeArr){
+            for(int i = 0; i< numRows && index < sizeArr; i++){
+                sb[i].append(arr[index++]);
+            }
+            for(int i = numRows -2; i>0 && index < sizeArr; i--){
+                sb[i].append(arr[index++]);
             }
         }
-        return readMatrix(matrixChar);
+
+        StringBuilder res = sb[0];
+        for (int i = 1; i < numRows; i++) {
+            res.append(sb[i].toString());
+        }
+        return res.toString();
     }
 
-    private static String readMatrix(char[][] matrix) {
-        StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < matrix.length; i++) {
-            for( int j = 0; j < matrix[i].length; j++) {
-                sb.append(matrix[i][j]);
-            }
-        }
-        return sb.toString();
-    }
 
     public static void main(String[] args){
         System.out.println(convert("PAYPALISHIRING",3));
