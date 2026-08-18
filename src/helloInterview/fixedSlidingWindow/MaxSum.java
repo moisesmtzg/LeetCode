@@ -1,4 +1,4 @@
-package helloInterview;
+package helloInterview.fixedSlidingWindow;
 
 public class MaxSum {
     public static int maxSum(int[] nums, int k) {

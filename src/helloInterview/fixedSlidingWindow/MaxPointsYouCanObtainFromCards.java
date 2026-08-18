@@ -1,4 +1,4 @@
-package helloInterview;
+package helloInterview.fixedSlidingWindow;
 
 public class MaxPointsYouCanObtainFromCards {
     public static int maxScore(int[] cards, int k){
